@@ -10,15 +10,12 @@ export default function Home() {
       throw new Error("Параметр lambda должен быть больше 0");
     }
 
-    // Генерируем случайное число U в диапазоне [0, 1)
     const U = Math.random();
 
-    // Применяем формулу экспоненциального распределения
     setRandomNum(-Math.log(1 - U) / lambda);
   }
 
-  // Пример использования:
-  const lambda = 1; // Задайте значение lambda
+  const lambda = 1;
   return (
     <div className="h-screen w-screen flex flex-col gap-4 items-center justify-center">
       <h1 className="text-3xl">Генерация случайного числа</h1>
